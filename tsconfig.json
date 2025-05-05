@@ -1,11 +1,15 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "rootDir": "src",
-    "outDir": "dist",
-    "strict": true
+    "target": "ES2017",                          /* Suporta private fields */
+    "module": "CommonJS",                        /* Node.js */
+    "lib": ["ES2017", "DOM"],                    /* APIs modernas + DOM */
+    "rootDir": "src",                            /* Origem do TS */
+    "outDir": "dist",                            /* Build sairá aqui */
+    "esModuleInterop": true,                     /* Permite import default */
+    "skipLibCheck": true,                        /* Ignora erros em node_modules */
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
